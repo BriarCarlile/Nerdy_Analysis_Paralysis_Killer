@@ -35,7 +35,6 @@ jobs:
           jupyter lite build \
             --contents content \
             --output-dir dist
-            --config jupyter-lite.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

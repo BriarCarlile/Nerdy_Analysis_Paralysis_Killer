@@ -28,6 +28,9 @@ jobs:
         run: |
           mkdir -p content/wheels
           cp wheel_dist/*.whl content/wheels
+      - name: Generate piplite index
+        run: |
+          jupyter lite pip index contents/wheels
       - name: Build the JupyterLite site
         run: |
           cp README.md content

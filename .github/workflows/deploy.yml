@@ -36,7 +36,9 @@ jobs:
           cp README.md content
           # Build JupyterLite - Python modules in content will be accessible
           jupyter lite build \
+            --config jupyter-lite.json \
             --contents content \
+            --piplite-wheels content/wheels \
             --output-dir dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

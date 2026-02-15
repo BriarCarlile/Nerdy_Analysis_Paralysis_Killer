@@ -2,3 +2,9 @@
 /build/
 /src/Nerdy_Analysis_Paralysis_Killer_Module.egg-info/
 /src/nerdy_analysis_paralysis_killer_module/Nerdy_Analysis_Paralysis_Killer_Module.egg-info/
+wheel_dist/
+jupyterlite-env/
+_output
+.cache
+.idea
+.ipynb_checkpoints

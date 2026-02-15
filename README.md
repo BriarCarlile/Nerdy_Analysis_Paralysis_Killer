@@ -10,6 +10,7 @@ This "application" (very basic right now) takes a spreadsheet where a number of 
 |--------------|---|---|---|
 | Super-Duper  |The Duper|150|20|
 | Not So Duper | Just Sad | 500 | 5|
+| Kinda Meh    | Mehza     | 300   | 15       | 
 
 
 ### Sample output:

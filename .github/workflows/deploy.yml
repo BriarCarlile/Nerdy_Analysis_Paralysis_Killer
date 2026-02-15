@@ -23,16 +23,19 @@ jobs:
           python -m pip install -r requirements.txt
       - name: Build Nerdy Analysis Paralysis Killer Module wheel
         run: |
-          python -m build --wheel --outdir dist
+          python -m build --wheel --outdir wheel_dist
       - name: Copy Nerdy Analysis Paralysis Killer Module wheel to Notebook
         run: |
           mkdir -p content/wheels
-          cp dist/*.whl content/wheels
+          cp wheel_dist/*.whl content/wheels
       - name: Build the JupyterLite site
         run: |
           cp README.md content
           # Build JupyterLite - Python modules in content will be accessible
-          jupyter lite build --contents content --output-dir dist
+          jupyter lite build \
+            --contents content \
+            --output-dir dist
+            --config jupyter-lite.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

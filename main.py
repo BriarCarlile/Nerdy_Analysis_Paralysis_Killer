@@ -8,14 +8,14 @@ from functions.compute_weighted_score import compute_weighted_score
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 def current_flow():
+    standard_csv_config_file = "configs/generic_file_structure.json"
     standard_csv_config = read_json("configs/generic_file_structure.json")
     config = None
     df = None
     file_name = None # Can be set by argparse
 
-    if not config:
-        config = read_json("configs/generic_file_structure.json")
-
+    config = config if config else standard_csv_config_file
+    config = read_json(config)
     file_name = file_name if file_name else config["file_name"]
 
     if not (config["column_headers_row"] == standard_csv_config["column_headers_row"] and

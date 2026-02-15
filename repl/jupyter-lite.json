@@ -5,6 +5,11 @@
       "@jupyterlab/drawio-extension",
       "jupyterlab-kernel-spy",
       "jupyterlab-tour"
-    ]
+    ],
+    "litePluginSettings": {
+      "@jupyterlite/pyodide-kernel-extension:kernel": {
+        "pipliteUrls": ["./wheels/"]
+      }
+    }
   }
 }

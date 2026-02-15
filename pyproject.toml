@@ -2,8 +2,12 @@
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["nerdy_analysis_paralysis_killer_module*"]
+
 [project]
-name = "data_manipulation_package"
+name = "Nerdy_Analysis_Paralysis_Killer_Module"
 version = "0.1.0"
 authors = [
   { name="Briar Carlile", email="sometempemail@email.com" },

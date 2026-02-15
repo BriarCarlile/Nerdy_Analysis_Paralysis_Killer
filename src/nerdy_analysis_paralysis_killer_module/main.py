@@ -9,11 +9,11 @@ from content.functions.compute_weighted_score import compute_weighted_score
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 def current_flow():
-    standard_csv_config_file = "../content/configs/generic_file_structure.json"
+    standard_csv_config_file = "../../content/configs/generic_file_structure.json"
     standard_csv_config = read_json("content/configs/generic_file_structure.json")
     config = "scope_file_structure.json"
     df = None
-    file_name = "../scope_data.csv"  # Can be set by argparse
+    file_name = "../../scope_data.csv"  # Can be set by argparse
 
     config = config if config else standard_csv_config_file
     config = read_json(config)

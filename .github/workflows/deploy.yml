@@ -24,13 +24,8 @@ jobs:
       - name: Build the JupyterLite site
         run: |
           cp README.md content
-          # Create the pyodide directory structure for custom Python packages
-          mkdir -p files
-          # Copy Python packages to files directory so they're accessible in Pyodide
-          cp -r content/functions files/
-          cp -r content/utils files/
-          # Build JupyterLite with both content and custom Python files
-          jupyter lite build --contents content --lite-dir files --output-dir dist
+          # Build JupyterLite - Python modules in content will be accessible
+          jupyter lite build --contents content --output-dir dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

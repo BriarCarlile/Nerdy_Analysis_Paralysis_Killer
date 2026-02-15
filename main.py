@@ -1,5 +1,6 @@
 from functions.compute_consistency_rank import compute_consistency_rank
 from functions.compute_ranking import compute_ranking
+from utils.create_radar_chart import create_radar_chart, create_multiple_radar_chart
 from utils.read_files import read_json, read_csv
 from functions.compute_weighted_score import compute_weighted_score
 # This is a sample Python script.
@@ -10,9 +11,9 @@ from functions.compute_weighted_score import compute_weighted_score
 def current_flow():
     standard_csv_config_file = "configs/generic_file_structure.json"
     standard_csv_config = read_json("configs/generic_file_structure.json")
-    config = None
+    config = "scope_file_structure.json"
     df = None
-    file_name = None # Can be set by argparse
+    file_name = "scope_data.csv" # Can be set by argparse
 
     config = config if config else standard_csv_config_file
     config = read_json(config)
@@ -38,6 +39,10 @@ def current_flow():
     df = compute_consistency_rank(df, "weighted-rank")
 
     df.to_csv("output.csv", index=False)
+
+    columns = [col for col in df.columns if col.endswith("-weighted") ]
+
+    create_multiple_radar_chart(df, columns, "Weighted Score by Use Case")
 
 
 def print_hi(name):

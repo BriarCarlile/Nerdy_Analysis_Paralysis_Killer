@@ -1,0 +1,66 @@
+{
+  "file_name": "sample_data_sets/sample_vacuum_cleaners.csv",
+  "column_headers_row": "1",
+  "column_headers_column_start": "A",
+  "data_column_start": "B",
+  "data_column_end": "",
+  "data_row_start": "2",
+  "data_row_end": "",
+  "metrics": {
+    "Min Power (W)": { "direction": "lower" },
+    "Max Power (W)": { "direction": "higher" },
+    "Suction (Air Watts)": { "direction": "higher" },
+    "Noise (dB)": { "direction": "lower" },
+    "Weight (lbs)": { "direction": "lower" },
+    "Dust Capacity (L)": { "direction": "higher" },
+    "Cord Length (ft)": { "direction": "higher" },
+    "Filtration Efficiency (%)": { "direction": "higher" },
+    "Run Time (min)": { "direction": "higher" }
+  },
+  "profiles": {
+    "Apartment": {
+      "Min Power (W)": 4,
+      "Max Power (W)": 4,
+      "Suction (Air Watts)": 14,
+      "Noise (dB)": 20,
+      "Weight (lbs)": 20,
+      "Dust Capacity (L)": 6,
+      "Cord Length (ft)": 6,
+      "Filtration Efficiency (%)": 16,
+      "Run Time (min)": 10
+    },
+    "Pet_Hair": {
+      "Min Power (W)": 4,
+      "Max Power (W)": 8,
+      "Suction (Air Watts)": 24,
+      "Noise (dB)": 10,
+      "Weight (lbs)": 8,
+      "Dust Capacity (L)": 12,
+      "Cord Length (ft)": 6,
+      "Filtration Efficiency (%)": 16,
+      "Run Time (min)": 12
+    },
+    "Deep_Clean": {
+      "Min Power (W)": 2,
+      "Max Power (W)": 10,
+      "Suction (Air Watts)": 30,
+      "Noise (dB)": 4,
+      "Weight (lbs)": 4,
+      "Dust Capacity (L)": 14,
+      "Cord Length (ft)": 12,
+      "Filtration Efficiency (%)": 14,
+      "Run Time (min)": 10
+    },
+    "Balanced": {
+      "Min Power (W)": 6,
+      "Max Power (W)": 6,
+      "Suction (Air Watts)": 18,
+      "Noise (dB)": 12,
+      "Weight (lbs)": 12,
+      "Dust Capacity (L)": 8,
+      "Cord Length (ft)": 8,
+      "Filtration Efficiency (%)": 12,
+      "Run Time (min)": 10
+    }
+  }
+}

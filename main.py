@@ -1,16 +1,16 @@
-from functions.compute_consistency_rank import compute_consistency_rank
-from functions.compute_ranking import compute_ranking
-from utils.create_radar_chart import create_radar_chart, create_multiple_radar_chart
-from utils.read_files import read_json, read_csv
-from functions.compute_weighted_score import compute_weighted_score
+from content.functions.compute_consistency_rank import compute_consistency_rank
+from content.functions.compute_ranking import compute_ranking
+from content.utils.create_radar_chart import create_multiple_radar_chart
+from content.utils.read_files import read_json, read_csv
+from content.functions.compute_weighted_score import compute_weighted_score
 # This is a sample Python script.
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 def current_flow():
-    standard_csv_config_file = "configs/generic_file_structure.json"
-    standard_csv_config = read_json("configs/generic_file_structure.json")
+    standard_csv_config_file = "content/configs/generic_file_structure.json"
+    standard_csv_config = read_json("content/configs/generic_file_structure.json")
     config = "scope_file_structure.json"
     df = None
     file_name = "scope_data.csv" # Can be set by argparse

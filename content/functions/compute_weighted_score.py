@@ -1,7 +1,7 @@
 
 import pandas as pd
 
-from functions.target_equations import lower_target, higher_target
+from content.functions.target_equations import lower_target, higher_target
 
 def compute_weighted_score(df, metrics, profile_weights):
     score = pd.Series(0.0, index=df.index)
